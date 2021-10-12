@@ -1,0 +1,33 @@
+package com.softwareinstitute.training.ellison.adam;                                           
+                                                                                               
+import java.util.Scanner;                                                                      
+                                                                                               
+public class Paint {                                                                           
+                                                                                               
+    public static void main(String[] args) {                                                   
+	    Double width, height, quantity, price, cost;                                           
+                                                                                               
+        Scanner input = new Scanner(System.in);                                                
+                                                                                               
+        System.out.println("Please enter wall width in metres");                               
+                                                                                               
+        width = input.nextDouble();                                                            
+                                                                                               
+        System.out.println("Please enter the wall height metres");                             
+                                                                                               
+        height = input.nextDouble();                                                           
+                                                                                               
+        System.out.println("Please enter price per square metre of paint");                    
+                                                                                               
+        price = input.nextDouble();                                                            
+                                                                                               
+        //calculate cost of paint and quantity                                                 
+                                                                                               
+        cost = width * height * price;                                                         
+        quantity = Math.ceil((width*height)/ 10);        //Assume tin has 10m^2 coverage                  
+                                                                                               
+                                                                                               
+        System.out.println("The quantity of Paint tins required will be " + quantity + ".");   
+        System.out.println("The price of the paint required will be £"+ cost + ".");           
+    }                                                                                          
+}                                                                                              
